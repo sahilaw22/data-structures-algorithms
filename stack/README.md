@@ -7,11 +7,11 @@ Small, focused implementations as I practice core DSA ideas. Current focus: stac
 ## Programs (folder `stack/`)
 
 1) **Stack Expression Validator**  
-   - Files: `stack/StackExpressionValidator.c`, `stack/StackExpressionValidator.cpp`  
+   - Files: `StackExpressionValidator.c`, `StackExpressionValidator.cpp`  
    - Purpose: Checks whether an expression has balanced parentheses/braces/brackets using a stack (`push`/`pop` helpers in C, `std::stack` in C++).
 
 2) **Postfix Evaluator**  
-   - Files: `stack/PostfixEval.c`, `stack/PostfixEval.cpp`  
+   - Files: `PostfixEval.c`, `PostfixEval.cpp`  
    - Purpose: Evaluates a postfix (Reverse Polish) arithmetic expression with operators `+ - * /` and single-digit operands. Uses an explicit stack in C and `std::stack<int>` in C++. Example input: `23*54*+9-` -> result `17`.
 
 Supporting file: `stack/cmd.txt` contains `cl` commands for building with the Visual Studio Developer Command Prompt.
