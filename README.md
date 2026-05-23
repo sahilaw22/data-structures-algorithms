@@ -1,43 +1,51 @@
-# Data Structures & Algorithms
+# Data Structures & Algorithms Lab
 
-Small, focused implementations as I practice core DSA ideas. Current focus: stack-based utilities.
-
----
-
-## Programs (folder `stack/`)
-
-1) **Stack Expression Validator**  
-   - Files: `stack/StackExpressionValidator.c`, `stack/StackExpressionValidator.cpp`  
-   - Purpose: Checks whether an expression has balanced parentheses/braces/brackets using a stack (`push`/`pop` helpers in C, `std::stack` in C++).
-
-2) **Postfix Evaluator**  
-   - Files: `stack/PostfixEval.c`, `stack/PostfixEval.cpp`  
-   - Purpose: Evaluates a postfix (Reverse Polish) arithmetic expression with operators `+ - * /` and single-digit operands. Uses an explicit stack in C and `std::stack<int>` in C++. Example input: `23*54*+9-` -> result `17`.
-
-Supporting file: `stack/cmd.txt` contains `cl` commands for building with the Visual Studio Developer Command Prompt.
+Beginner-friendly implementations of core DSA practicals in both C and C++. Each program is written from scratch (no STL `stack`, `queue`, etc.) and kept simple for learning.
 
 ---
 
-## How to Compile & Run (GCC/Clang)
+## Program Index (Clean Table)
 
-From the repo root:
+| Topic | Folders | Programs |
+| --- | --- | --- |
+| Stack | `stack/C`, `stack/C++` | parenthesis check, postfix eval, infix to postfix/prefix, prefix to postfix, basic stack |
+| Queue | `queue/C`, `queue/C++` | basic queue, circular queue, priority queue |
+| Linked List | `linklist/C`, `linklist/C++` | singly list, ordered list, polynomial add, doubly list |
+| Tree | `tree/C`, `tree/C++` | BST traversals, BST sort, duplicate in BST, threaded binary tree |
+| Algorithms | `algorithm/C`, `algorithm/C++` | dijkstra, prim, kruskal, quick sort, shell sort, merge sort |
+
+---
+
+## Folder Layout
+
+- [stack/](stack)
+- [queue/](queue)
+- [linklist/](linklist)
+- [tree/](tree)
+- [algorithm/](algorithm)
+
+---
+
+## How to Compile & Run
+
+From the repo root, compile any file you want. Examples:
 
 ```bash
-# C versions
-gcc stack/StackExpressionValidator.c -o validator_c
-gcc stack/PostfixEval.c -o postfix_c
+# C
+gcc stack/C/basicStack.c -o basicStack
+gcc queue/C/priorityQueue.c -o priorityQueue
 
-# C++ versions
-g++ stack/StackExpressionValidator.cpp -o validator_cpp
-g++ stack/PostfixEval.cpp -o postfix_cpp
+# C++
+g++ tree/C++/basicTree.cpp -o basicTree
+g++ algorithm/C++/mergeSort.cpp -o mergeSort
 ```
 
-Run the executables (`./validator_c`, `./validator_cpp`, `./postfix_c`, `./postfix_cpp`) and enter the expression when prompted.
+Run the executable and follow the menu or input prompts shown on screen.
 
 ---
 
-## Notes and Next Steps
+## Notes
 
-- Current postfix evaluator accepts only single-digit non-negative operands and no spaces; division is integer division without zero checks.
-- The validator treats any closing bracket without a prior opening as invalid but does not enforce matching types across pairs (e.g., `(]` passes length-wise). Improving type-matching and error messaging is a good next enhancement.
-- Upcoming topics: queues, linked lists, binary search trees, sorting algorithms.
+- All programs are kept minimal and readable for beginners.
+- Each file includes a short header comment describing the goal.
+- If you want more step-by-step comments in any program, tell me the filename.
