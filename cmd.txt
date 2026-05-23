@@ -1,0 +1,7 @@
+Build and run (C version) - enter each line in cmd:
+Compile: gcc -o myprogram main.c
+Execute: ./myprogram.exe or ./myprogram
+
+Build and run (C++ version) - enter each line in cmd:
+Compile: g++ -o myprogram main.cpp
+Execute: ./myprogram.exe or ./myprogram

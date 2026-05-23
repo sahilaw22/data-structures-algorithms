@@ -1,0 +1,4 @@
+# Ignore all VS Code workspace settings and task/launch files
+*.vscode/
+*.exe
+
